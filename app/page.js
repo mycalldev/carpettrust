@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './page.module.css';
+import SliderBar from './components/SliderBar';
 
 export default function Home() {
   // State to track if the mobile nav is open
@@ -25,7 +26,7 @@ export default function Home() {
       <nav className={styles.navbar}>
         {/* Logo / Brand */}
         <div className={styles.logo}>
-          conact@carpettrust.com
+          contact@carpettrust.com
         </div>
 
         {/* Hamburger button (visible on mobile) */}
@@ -47,15 +48,25 @@ export default function Home() {
         </ul>
       </nav>
 
+      <SliderBar />
+
       {/* ============== HEADER ============== */}
       <header className={styles.header}>
-        <h1 className={styles.title}>Welcome to Carpet Trust</h1>
+        <h1 className={styles.title}>Welcome to</h1>
+        <Image 
+          className={styles.imageTop}
+          src={'/TRUST_SMALL.jpg'} 
+          width={500} 
+          height={110} 
+          quality={100} 
+          alt={'Carpet Trust Image'}
+        />
         <p className={styles.subtitle}>Find the perfect flooring for your home!</p>
       </header>
 
       {/* ============== HERO SECTION ============== */}
       <section className={styles.hero} id="hero">
-        <img src="/hero1.png" alt="Carpet Store" className={styles.heroImage} />
+        <img src="/hero_square.png" alt="Carpet Store" className={styles.heroImage} />
         <div className={styles.heroText}>
           <h2>Discover the Best Flooring for Your Home</h2>
           <button className={styles.button1}>Contact</button>
@@ -64,7 +75,7 @@ export default function Home() {
 
       {/* ============== FEATURED PRODUCTS SECTION ============== */}
       <section className={styles.products} id="products">
-        <h2 className={styles.sectionTitle}>Featured Products</h2>
+        <h2 className={styles.sectionTitle}>Categories</h2>
         <div className={styles.productGrid}>
           <div className={styles.productCard}>
             <img
@@ -74,8 +85,8 @@ export default function Home() {
             />
             <div className={styles.productCardText}>
               <h3>Luxury Carpet</h3>
-              <p>$7.99 per square meter</p>
-              {/* <button className={styles.button}>Shop Now</button> */}
+              <p className={styles.categoryPrice}>£7.99 per square meter</p>
+              <button className={styles.button1}>View Now</button>
             </div>
           </div>
 
@@ -87,8 +98,8 @@ export default function Home() {
             />
             <div className={styles.productCardText}>
               <h3>Wooden Flooring</h3>
-              <p>$19.99 per square meter</p>
-              {/* <button className={styles.button}>Shop Now</button> */}
+              <p className={styles.categoryPrice}>£19.99 per square meter</p>
+              <button className={styles.button1}>View Now</button>
             </div>
           </div>
 
@@ -100,8 +111,8 @@ export default function Home() {
             />
             <div className={styles.productCardText}>
               <h3>Vinyl Flooring</h3>
-              <p>$12.99 per square meter</p>
-              {/* <button className={styles.button}>Shop Now</button> */}
+              <p className={styles.categoryPrice}>£12.99 per square meter</p>
+              <button className={styles.button1}>View Now</button>
             </div>
           </div>
         </div>
@@ -157,15 +168,9 @@ export default function Home() {
 
           <div className={styles.saleItemText}>
             <h1>FREE UNDERLAY</h1>
-            <Image
-              src="/get-money.png"
-              alt="Money Icon"
-              className={styles.saleImage}
-              width={256}
-              height={256}
-            />
-            <p>Usually Costs £55.99 per bag....</p>
-            <p>NOW FREE</p>
+            
+            <p>FREE UNDRELAY with anything over 50 Square Metres</p>
+            
           </div>
         </div>
       </section>

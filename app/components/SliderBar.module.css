@@ -1,0 +1,46 @@
+.sliderBar {
+  width: 100%;
+  height: 50px;              /* Fixed height to keep layout stable */
+  background-color: #29B554;    /* Dark background */
+  color: #fff;               /* White text for contrast */
+  position: relative;        /* So the .sliderItem can be positioned within */
+  overflow: hidden;          /* Hide text as it slides out */
+  display: flex;
+  align-items: center;       /* Vertically center the text if needed */
+  justify-content: center;   /* Horizontally center if needed */
+}
+
+/* The text that slides in and out */
+.sliderItem {
+  position: absolute;              /* So we can animate freely */
+  width: 100%;                     /* Span the width */
+  text-align: center;             /* Center the text horizontally */
+  animation: slideInOut 3s ease-in-out 1;
+  /* 
+    If you're rotating messages in JS, you might see flicker if 
+    the text re-renders. Adjust the animation/logic accordingly.
+  */
+}
+
+@keyframes slideInOut {
+  0% {
+    transform: translateX(100%);  /* Start off-screen to the right */
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(0);     /* Now fully visible */
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);     /* Remain visible in the center */
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(0);     /* Still visible */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%); /* Slide completely off to the left */
+    opacity: 0;
+  }
+}
