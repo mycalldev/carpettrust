@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './SliderBar.module.css';
 
 export default function SliderBar() {
-  const messages = ['Free Delivery', 'Fast Fitting', 'Expert Service'];
+  const messages = ['Perfect Product', 'Expert Service', 'Best Price'];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
