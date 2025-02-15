@@ -8,20 +8,13 @@ import SliderBar from './components/SliderBar';
 import ImageCarousel from './components/ImageCarousel';
 
 export default function Home() {
-
-  
-  
-
   return (
     <div className={styles.container}>
       <Head>
         <title>Carpet & Flooring Store</title>
         <meta name="description" content="Best Carpet and Flooring Products" />
       </Head>
-
-      {/* ============== NAVIGATION ============== */}
       
-
       <SliderBar />
 
       {/* ============== HEADER ============== */}
@@ -35,7 +28,6 @@ export default function Home() {
           quality={100} 
           alt={'Carpet Trust Image'}
         />
-        {/* <p className={styles.subtitle}>Find the perfect flooring for your home!</p> */}
       </header>
 
       {/* ============== HERO SECTION ============== */}
@@ -50,7 +42,6 @@ export default function Home() {
         />
         <div className={styles.heroText}>
           <h2>Discover the Best Flooring for Your Home</h2>
-          {/* <button className={styles.button1}>Contact</button> */}
         </div>
       </section>
 
@@ -63,21 +54,21 @@ export default function Home() {
       <button className={styles.button2}>Contact</button>
       </div>
 
-
       <ImageCarousel />
+
       <div className={styles.whatsappLogoContainer}>
-            <Image
-              src={'/whatsapp.png'}
-              width={64}
-              height={64}
-              alt={'whatsapp logo'}
-              quality={100}
-              className={styles.whatsappLogo}
-            />
+        <Image
+          src={'/whatsapp.png'}
+          width={64}
+          height={64}
+          alt={'whatsapp logo'}
+          quality={100}
+          className={styles.whatsappLogo}
+        />
       </div>
 
       <div className={styles.whatsappBanner}>
-        <p>Contact Us Directly Via Whatsapp Messagin Service</p>
+        <p>Contact Us Directly Via Whatsapp Messaging Service</p>
       </div>
       {/* ============== PREVIOUS WORKS SECTION ==============
       <section className={styles.previousWorks} id="previous-works">
