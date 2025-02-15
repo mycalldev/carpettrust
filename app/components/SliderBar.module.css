@@ -16,6 +16,7 @@
   width: 100%;                     /* Span the width */
   text-align: center;             /* Center the text horizontally */
   animation: slideInOut 3s ease-in-out 1;
+  font-size: 1.5rem;
   /* 
     If you're rotating messages in JS, you might see flicker if 
     the text re-renders. Adjust the animation/logic accordingly.

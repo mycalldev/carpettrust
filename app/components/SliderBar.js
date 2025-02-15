@@ -9,7 +9,7 @@ export default function SliderBar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % messages.length);
-    }, 7000); // 3-second cycle
+    }, 3000); // 3-second cycle
     return () => clearInterval(interval);
   }, [messages.length]);
 

@@ -5,15 +5,12 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './page.module.css';
 import SliderBar from './components/SliderBar';
+import ImageCarousel from './components/ImageCarousel';
 
 export default function Home() {
-  // State to track if the mobile nav is open
-  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // Toggle nav
-  const handleNavToggle = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+  
+  
 
   return (
     <div className={styles.container}>
@@ -23,30 +20,7 @@ export default function Home() {
       </Head>
 
       {/* ============== NAVIGATION ============== */}
-      <nav className={styles.navbar}>
-        {/* Logo / Brand */}
-        <div className={styles.logo}>
-          contact@carpettrust.com
-        </div>
-
-        {/* Hamburger button (visible on mobile) */}
-        <button className={styles.hamburger} onClick={handleNavToggle}>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-        </button>
-
-        {/* Menu Items */}
-        <ul
-          className={`${styles.navLinks} ${isNavOpen ? styles.navActive : ''}`}
-        >
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#previous-works">Projects</a></li>
-          <li><a href="#sale">Sale</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-        </ul>
-      </nav>
+      
 
       <SliderBar />
 
@@ -61,64 +35,51 @@ export default function Home() {
           quality={100} 
           alt={'Carpet Trust Image'}
         />
-        <p className={styles.subtitle}>Find the perfect flooring for your home!</p>
+        {/* <p className={styles.subtitle}>Find the perfect flooring for your home!</p> */}
       </header>
 
       {/* ============== HERO SECTION ============== */}
       <section className={styles.hero} id="hero">
-        <img src="/hero_square.png" alt="Carpet Store" className={styles.heroImage} />
+        <Image 
+          width={1022}
+          height={728}
+          src="/hero_edited.png" 
+          alt="Carpet Store" 
+          className={styles.heroImage}
+          quality={100} 
+        />
         <div className={styles.heroText}>
           <h2>Discover the Best Flooring for Your Home</h2>
-          <button className={styles.button1}>Contact</button>
+          {/* <button className={styles.button1}>Contact</button> */}
         </div>
       </section>
 
-      {/* ============== FEATURED PRODUCTS SECTION ============== */}
-      <section className={styles.products} id="products">
-        <h2 className={styles.sectionTitle}>Categories</h2>
-        <div className={styles.productGrid}>
-          <div className={styles.productCard}>
-            <img
-              src="/carpet_image1.png"
-              alt="Carpet 1"
-              className={styles.productImage}
-            />
-            <div className={styles.productCardText}>
-              <h3>Luxury Carpet</h3>
-              <p className={styles.categoryPrice}>£7.99 per square meter</p>
-              <button className={styles.button1}>View Now</button>
-            </div>
-          </div>
+      {/* =============== SAME DAY QUOTATION ==================== */}
+      <div className={styles.containerSameDay}>
+        <p className={styles.textSameDay}>Same Day Estimation and Quotation</p>
+      </div>
+      <div className={styles.containerBTN}>
 
-          <div className={styles.productCard}>
-            <img
-              src="/laminate_image1.png"
-              alt="Flooring 1"
-              className={styles.productImage}
-            />
-            <div className={styles.productCardText}>
-              <h3>Wooden Flooring</h3>
-              <p className={styles.categoryPrice}>£19.99 per square meter</p>
-              <button className={styles.button1}>View Now</button>
-            </div>
-          </div>
+      <button className={styles.button2}>Contact</button>
+      </div>
 
-          <div className={styles.productCard}>
-            <img
-              src="/vinyl_image1.png"
-              alt="Vinyl 1"
-              className={styles.productImage}
-            />
-            <div className={styles.productCardText}>
-              <h3>Vinyl Flooring</h3>
-              <p className={styles.categoryPrice}>£12.99 per square meter</p>
-              <button className={styles.button1}>View Now</button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ============== PREVIOUS WORKS SECTION ============== */}
+      <ImageCarousel />
+      <div className={styles.whatsappLogoContainer}>
+            <Image
+              src={'/whatsapp.png'}
+              width={64}
+              height={64}
+              alt={'whatsapp logo'}
+              quality={100}
+              className={styles.whatsappLogo}
+            />
+      </div>
+
+      <div className={styles.whatsappBanner}>
+        <p>Contact Us Directly Via Whatsapp Messagin Service</p>
+      </div>
+      {/* ============== PREVIOUS WORKS SECTION ==============
       <section className={styles.previousWorks} id="previous-works">
         <h2 className={styles.sectionTitle}>Our Previous Works</h2>
         <div className={styles.worksGrid}>
@@ -152,10 +113,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============== SALE SECTION ============== */}
-      <section className={styles.sale} id="sale">
+      {/* <section className={styles.sale} id="sale">
         <h2 className={styles.sectionTitle}>Limited Time Offer</h2>
         <div className={styles.saleGrid}>
           <div className={styles.saleItem}>
@@ -173,12 +134,12 @@ export default function Home() {
             
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.gridSaleButton}>
+      {/* <section className={styles.gridSaleButton}>
         <button className={styles.buttonSale}>Contact</button>
         <button className={styles.buttonSale}>Whatsapp</button>
-      </section>
+      </section> */}
 
       {/* ============== REVIEWS SECTION ============== */}
       <section className={styles.reviews} id="reviews">
