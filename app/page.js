@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       <div className={styles.containerBTN}>
 
-      <button className={styles.button2}>Contact</button>
+      <button className={styles.button2} href={'tel:07754987116'}>Contact</button>
       </div>
 
       <ImageCarousel />
@@ -155,6 +155,37 @@ export default function Home() {
         <div className={styles.numberText}> Best Price Guarantee</div>
         </div>
       </section>
+
+      {/* ============== ABOUT US SECTION ============== */}
+      <section>
+        <div className={styles.containerAboutUs}>
+          <Image 
+          src={'/underlay.jpg'}
+          width={1000}
+          height={667}
+          alt='about us' 
+          quality={100} 
+          className={styles.aboutUsImage}
+          />
+        </div>
+
+        <div className={styles.containerAboutUsText}>
+          <div>Carpet Trust is a Family Run Business</div>
+          <div>With 21 Years Experience</div>
+          <div>We Offer a Wide Range of Flooring Solutions</div>
+          <div>From Carpets, Vinyl and Laminate Flooring</div>
+          <div>We Offer a Range of Underlay Options</div>
+          <div>We Offer a Free Measuring and Quotation Service</div>
+        
+        </div>
+
+        <div className={styles.containerBTN}>
+
+      <button className={styles.button2} href={'tel:07754987116'}>Contact</button>
+      </div>
+      </section>
+
+
 
 
       <footer className={styles.footer}>
