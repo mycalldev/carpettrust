@@ -1,0 +1,101 @@
+
+
+
+
+
+.containerMain {
+    margin: 40px 30px;
+    padding: 20px 30px;
+    background: #eeeeee;
+}
+
+.ratingMainContainer {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #29B554;
+    padding: 20px;
+    color: #fff;
+}
+
+.imageStar {
+ margin: 0 5px;
+}
+
+.ratingGrid {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    height: auto;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    align-items: center;
+}
+
+.rating {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.containerGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.review {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.titleReviews {
+  margin: 20px auto -10px auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #323232;
+}
+
+@media(min-width: 768px) {
+
+    .backNav {
+        margin: 100px;
+        font-size: 1.5rem;
+    }
+
+    .viewDetailsBTNMobile {
+        display: none;
+    }
+
+    .viewDetailsBTNDesktop {
+        display: block;
+        margin: 10px auto 50px auto;
+        padding: 10px 30px;
+        max-width: 250px;
+        border: solid 2px #91c0dc;
+        border-radius: 22px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #fff;
+        background-color: #91c0dc;
+        letter-spacing: 3px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .containerReview {
+        margin-bottom: 100px;
+    }
+    .containerMain {
+        width: 60%;
+        margin: 30px auto;
+        padding: 40px;
+    }
+
+    .titleMain {
+        margin-top: 40px;
+        font-size: 2rem;
+    }
+
+    .titleReviews {
+        font-size: 2rem;
+    }
+}

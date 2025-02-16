@@ -2,11 +2,13 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
 import SliderBar from './components/SliderBar';
 import ImageCarousel from './components/ImageCarousel';
-import DropDownButton from './components/DropDownButton'
+import DropDownButton from './components/DropDownButton';
+import Review from './components/Review';
 
 export default function Home() {
 
@@ -98,45 +100,104 @@ export default function Home() {
         className={styles.imageDoor}
         />
 
-<div className={styles.textSamples}>
+      <div className={styles.textSamples}>
         <p>We Bring The Samples To Your Door</p>
       </div>
       </div>
-      {/* ============== PREVIOUS WORKS SECTION ==============
-      <section className={styles.previousWorks} id="previous-works">
-        <h2 className={styles.sectionTitle}>Our Previous Works</h2>
-        <div className={styles.worksGrid}>
-          <div className={styles.workCard}>
-            <img
-              src="/project1.jpg"
-              alt="Project 1"
-              className={styles.workImage}
+
+      <Review />
+      {/* <div className={styles.containerBTN}>
+        <button className={styles.reviewBTN}>Veiw</button>
+      </div> */}
+
+      <div className={styles.containerMybuilder}>
+        100% Positive Feedback on MyBuilder
+        <div>
+          <Link href={'https://www.mybuilder.com/profile/carpet-trust'}>
+            <Image 
+            src={'/mybuilder2.png'} 
+            width={250} 
+            height={250} 
+            alt='mybuilder logo' 
+            quality={100} 
+            className={styles.mybuilderImage}
             />
-            <h3>Luxury Bedroom Carpet Installation</h3>
-            <p>Installed in a modern bedroom, offering a plush and elegant look.</p>
-          </div>
-          <div className={styles.workCard}>
-            <img
-              src="/project2.jpg"
-              alt="Project 2"
-              className={styles.workImage}
-            />
-            <h3>Wooden Flooring in Living Room</h3>
-            <p>Classic wooden flooring that enhances the natural warmth of the space.</p>
-          </div>
-          <div className={styles.workCard}>
-            <img
-              src="/project3.jpg"
-              alt="Project 3"
-              className={styles.workImage}
-            />
-            <h3>Vinyl Flooring in Kitchen</h3>
-            <p>
-              Durable vinyl flooring that combines style with practicality in a busy kitchen.
-            </p>
-          </div>
+          </Link>
         </div>
-      </section> */}
+      </div>
+{/* ============== NUMBER SECTION ============== */}
+      <section>
+        <div className={styles.containerGridNumbers}>
+          <Image 
+          className={styles.numberImage}
+          src={'/number-one.png'} 
+          width={64} 
+          height={64} 
+          alt='number 1' 
+          quality={100} 
+          />
+        <div className={styles.numberText}> Perfect Price</div>
+        <Image 
+          src={'/number-2.png'} 
+          width={64} 
+          height={64} 
+          alt='number 1' 
+          quality={100} 
+          />
+        <div className={styles.numberText}> Expert Service</div>
+        <Image 
+          src={'/number-3.png'} 
+          width={64} 
+          height={64} 
+          alt='number 1' 
+          quality={100} 
+          />
+        <div className={styles.numberText}> Best Price Guarantee</div>
+        </div>
+      </section>
+
+
+      <footer className={styles.footer}>
+        <p>© 2024 Carpet & Flooring Store. All rights reserved.</p>
+      </footer>
+    </div>
+    
+  );
+}
+      // <section className={styles.previousWorks} id="previous-works">
+      //   <h2 className={styles.sectionTitle}>Our Previous Works</h2>
+      //   <div className={styles.worksGrid}>
+      //     <div className={styles.workCard}>
+      //       <img
+      //         src="/project1.jpg"
+      //         alt="Project 1"
+      //         className={styles.workImage}
+      //       />
+      //       <h3>Luxury Bedroom Carpet Installation</h3>
+      //       <p>Installed in a modern bedroom, offering a plush and elegant look.</p>
+      //     </div>
+      //     <div className={styles.workCard}>
+      //       <img
+      //         src="/project2.jpg"
+      //         alt="Project 2"
+      //         className={styles.workImage}
+      //       />
+      //       <h3>Wooden Flooring in Living Room</h3>
+      //       <p>Classic wooden flooring that enhances the natural warmth of the space.</p>
+      //     </div>
+      //     <div className={styles.workCard}>
+      //       <img
+      //         src="/project3.jpg"
+      //         alt="Project 3"
+      //         className={styles.workImage}
+      //       />
+      //       <h3>Vinyl Flooring in Kitchen</h3>
+      //       <p>
+      //         Durable vinyl flooring that combines style with practicality in a busy kitchen.
+      //       </p>
+      //     </div>
+      //   </div>
+      // </section> */}
 
       {/* ============== SALE SECTION ============== */}
       {/* <section className={styles.sale} id="sale">
@@ -165,31 +226,24 @@ export default function Home() {
       </section> */}
 
       {/* ============== REVIEWS SECTION ============== */}
-      <section className={styles.reviews} id="reviews">
-        <h2 className={styles.sectionTitle}>Customer Reviews</h2>
-        <div className={styles.reviewGrid}>
-          <div className={styles.reviewCard}>
-            <p>"Absolutely love the new carpet! It transformed my bedroom into a cozy haven."</p>
-            <h4>- Sarah J.</h4>
-          </div>
-          <div className={styles.reviewCard}>
-            <p>"The wooden flooring we got is stunning. The installation team was very professional."</p>
-            <h4>- Mark R.</h4>
-          </div>
-          <div className={styles.reviewCard}>
-            <p>
-              "Amazing service and great value for money. The vinyl flooring looks perfect in our
-              kitchen."
-            </p>
-            <h4>- Emma W.</h4>
-          </div>
-        </div>
-      </section>
+      {/* // <section className={styles.reviews} id="reviews">
+      //   <h2 className={styles.sectionTitle}>Customer Reviews</h2>
+      //   <div className={styles.reviewGrid}>
+      //     <div className={styles.reviewCard}>
+      //       <p>"Absolutely love the new carpet! It transformed my bedroom into a cozy haven."</p>
+      //       <h4>- Sarah J.</h4>
+      //     </div>
+      //     <div className={styles.reviewCard}>
+      //       <p>"The wooden flooring we got is stunning. The installation team was very professional."</p>
+      //       <h4>- Mark R.</h4>
+      //     </div>
+      //     <div className={styles.reviewCard}>
+      //       <p>
+      //         "Amazing service and great value for money. The vinyl flooring looks perfect in our
+      //         kitchen."
+      //       </p>
+      //       <h4>- Emma W.</h4>
+      //     </div>
+      //   </div>
+      // </section> */}
 
-      {/* ============== FOOTER ============== */}
-      <footer className={styles.footer}>
-        <p>© 2024 Carpet & Flooring Store. All rights reserved.</p>
-      </footer>
-    </div>
-  );
-}
