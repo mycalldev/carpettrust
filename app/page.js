@@ -6,8 +6,16 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import SliderBar from './components/SliderBar';
 import ImageCarousel from './components/ImageCarousel';
+import DropDownButton from './components/DropDownButton'
 
 export default function Home() {
+
+  const buttonText = {
+    hard: 'Hard Wearing',
+    durable: 'Durable',
+    stain: 'Stain Safe',
+    low: 'Maintainable'
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -56,6 +64,13 @@ export default function Home() {
 
       <ImageCarousel />
 
+      <div className={styles.gridDropDownButton}>
+        <DropDownButton text={buttonText.hard} />
+        <DropDownButton text={buttonText.durable}/>
+        <DropDownButton text={buttonText.stain}/>
+        <DropDownButton text={buttonText.low}/>
+      </div>
+
       <div className={styles.whatsappLogoContainer}>
         <Image
           src={'/whatsapp.png'}
@@ -69,6 +84,23 @@ export default function Home() {
 
       <div className={styles.whatsappBanner}>
         <p>Contact Us Directly Via Whatsapp Messaging Service</p>
+      </div>
+
+      {/* ============== SAMPLES TO DOOR ===================== */}
+
+      <div className={styles.containerImageDoor}>
+        <Image 
+        src={'/carpet_samples.jpg'} 
+        width={612} 
+        height={408} 
+        quality={100} 
+        alt='image of samples' 
+        className={styles.imageDoor}
+        />
+
+<div className={styles.textSamples}>
+        <p>We Bring The Samples To Your Door</p>
+      </div>
       </div>
       {/* ============== PREVIOUS WORKS SECTION ==============
       <section className={styles.previousWorks} id="previous-works">

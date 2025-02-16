@@ -196,8 +196,28 @@
 .whatsappBanner {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
+
+.gridDropDownButton {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============== SAMPLES TO DOOR SECTION ============= */
+.imageDoor {
+  width: 100%;
+  height: auto;
+}
+
+.textSamples {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px;
+}
+
 /* ============== PREVIOUS WORKS SECTION ============== */
 .previousWorks {
   margin: 3rem 0;
