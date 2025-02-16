@@ -16,8 +16,11 @@ export default function Home() {
     hard: 'Hard Wearing',
     durable: 'Durable',
     stain: 'Stain Safe',
-    low: 'Maintainable'
+    low: 'Maintainable',
+    easy: 'Easy Clean',
+    ranges: 'Collection'
   }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -71,6 +74,8 @@ export default function Home() {
         <DropDownButton text={buttonText.durable}/>
         <DropDownButton text={buttonText.stain}/>
         <DropDownButton text={buttonText.low}/>
+        <DropDownButton text={buttonText.easy}/>
+        <DropDownButton text={buttonText.ranges}/>
       </div>
 
       <div className={styles.whatsappLogoContainer}>
@@ -181,7 +186,7 @@ export default function Home() {
 
         <div className={styles.containerBTN}>
 
-      <button className={styles.button2} href={'tel:07754987116'}>Contact</button>
+      <button className={styles.button3} href={'tel:07754987116'}>Contact</button>
       </div>
       </section>
 

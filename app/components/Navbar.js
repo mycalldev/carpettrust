@@ -37,7 +37,7 @@ export default function Navbar() {
 
           <div className={styles.containerLogo}>
               <Image
-                src={'/whatsapp.png'}
+                src={'/carpettrust_logo.jpg'}
                 width={64}
                 height={64}
                 alt={'whatsapp logo'}
@@ -62,19 +62,15 @@ export default function Navbar() {
                 </Link>
                 <Link href={'/previous'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
-                    <li className={styles.listItem}>Previous Projects</li>
+                    <li className={styles.listItem}>Services</li>
                   </div>
                 </Link>
                 <Link href={'/current'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
-                    <li className={styles.listItem}>Current Projects</li>
+                    <li className={styles.listItem}>Projects and Reviews</li>
                   </div>
                 </Link>
-                <Link href={'/sponsorship'} className={styles.linkBTN} prefetch={true}>
-                  <div className={styles.listItemContainer} onClick={() => handleToggle()}>
-                    <li className={styles.listItem}>Sponsorship</li>
-                  </div>
-                </Link>
+               
                 <Link href={'/contact'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>Contact</li>
@@ -92,24 +88,24 @@ export default function Navbar() {
           <div className={styles.containerDesktop}> 
             <div className={styles.telGrid}>
               <Image
-                    src={'/phone-call.png'}
+                    src={'/telephone.png'}
                     width={32}
                     height={32}
                     className={styles.imageBurger}
                     alt={'menu bar'}
                     quality={100}
                   />
-             <div className={styles.headerEmail}>0207 252 9380</div>
+             <div className={styles.headerEmail}>07754 987 116</div>
             </div>
             <Link href="/#" className={styles.undreline}>
-              <div className={styles.titleMainDesktop}>HARTCROWN LTD</div>
+              <div className={styles.titleMainDesktop}>Carpet Trust</div>
             </Link>
 
             <div className={styles.containerLogo}>
                 <Image
-                  src={'/HartCrown_Logo_Edited.jpg'}
-                  width={118}
-                  height={83.5}
+                  src={'/carpettrust_logo.jpg'}
+                  width={125}
+                  height={125}
                   alt={'logo'}
                   quality={100}
                   className={styles.logo}
