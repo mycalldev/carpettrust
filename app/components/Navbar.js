@@ -55,23 +55,23 @@ export default function Navbar() {
                     <li className={styles.listItem}>Home</li>
                   </div>
                 </Link>
-                <Link href={'/about'} className={styles.linkBTN} prefetch={true}>
+                <Link href={'/About'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>About</li>
                   </div>
                 </Link>
-                <Link href={'/previous'} className={styles.linkBTN} prefetch={true}>
+                <Link href={'/Services'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>Services</li>
                   </div>
                 </Link>
-                <Link href={'/current'} className={styles.linkBTN} prefetch={true}>
+                {/* <Link href={'/current'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>Projects and Reviews</li>
                   </div>
-                </Link>
+                </Link> */}
                
-                <Link href={'/contact'} className={styles.linkBTN} prefetch={true}>
+                <Link href={'/Contact'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>Contact</li>
                   </div>

@@ -12,14 +12,33 @@ import Review from './components/Review';
 
 export default function Home() {
 
-  const buttonText = {
-    hard: 'Hard Wearing',
-    durable: 'Durable',
-    stain: 'Stain Safe',
-    low: 'Maintainable',
-    easy: 'Easy Clean',
-    ranges: 'Collection'
-  }
+  const buttonText = [
+    {
+      hard: 'Hard Wearing',
+      content: 'Our hard-wearing carpets are engineered to withstand heavy foot traffic, perfect for busy households.'
+    },
+    {
+      durable: 'Durable',
+      content: 'Built to last with premium materials that maintain their quality and appearance over years of use.'
+    },
+    {
+      stain: 'Stain Safe',
+      content: 'Advanced stain-resistant technology keeps your carpets looking clean and fresh, even with everyday spills.'
+    },
+    {
+      low: 'Maintainable',
+      content: 'Easy to maintain with simple cleaning routines that keep your flooring in excellent condition.'
+    },
+    {
+      easy: 'Easy Clean',
+      content: 'Quick and effortless cleaning solutions for busy modern lifestyles.'
+    },
+    {
+      ranges: 'Collection',
+      content: 'Explore our extensive range of styles, colors, and textures to find your perfect match.'
+    }
+  ]
+  
 
   return (
     <div className={styles.container}>
@@ -70,12 +89,12 @@ export default function Home() {
       <ImageCarousel />
 
       <div className={styles.gridDropDownButton}>
-        <DropDownButton text={buttonText.hard} />
-        <DropDownButton text={buttonText.durable}/>
-        <DropDownButton text={buttonText.stain}/>
-        <DropDownButton text={buttonText.low}/>
-        <DropDownButton text={buttonText.easy}/>
-        <DropDownButton text={buttonText.ranges}/>
+        <DropDownButton text={buttonText[0].hard} content={buttonText[0].content} />
+        <DropDownButton text={buttonText[1].durable} content={buttonText[1].content} />
+        <DropDownButton text={buttonText[2].stain} content={buttonText[2].content} />
+        <DropDownButton text={buttonText[3].low} content={buttonText[3].content} />
+        <DropDownButton text={buttonText[4].easy} content={buttonText[4].content} />
+        <DropDownButton text={buttonText[5].ranges} content={buttonText[5].content} />
       </div>
 
       <div className={styles.whatsappLogoContainer}>
@@ -179,9 +198,6 @@ export default function Home() {
           <div>With 21 Years Experience</div>
           <div>We Offer a Wide Range of Flooring Solutions</div>
           <div>From Carpets, Vinyl and Laminate Flooring</div>
-          <div>We Offer a Range of Underlay Options</div>
-          <div>We Offer a Free Measuring and Quotation Service</div>
-        
         </div>
 
         <div className={styles.containerBTN}>
