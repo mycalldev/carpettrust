@@ -167,7 +167,7 @@ export default function Projects() {
                   modules={[Navigation, Pagination]}
                   navigation
                   pagination={{ clickable: true }}
-                  className={styles.projectSwiper}
+                  className={`${styles.projectSwiper} customSwiper`}
                 >
                   {project.images.map((image, imageIndex) => (
                     <SwiperSlide key={imageIndex}>
