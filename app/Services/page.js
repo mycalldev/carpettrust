@@ -95,12 +95,16 @@ export default function Services() {
             <p>Expert fitting of laminate flooring with proper expansion gaps and underlay</p>
           </div>
           <div className={styles.additionalCard}>
-            <h3>Commercial Services</h3>
-            <p>Specialized solutions for offices, shops, and commercial spaces</p>
+            <h3>Entrance Matting</h3>
+            <p>Professional installation of heavy-duty entrance matting systems designed to protect your floors and enhance safety. Perfect for commercial entrances, helping to reduce maintenance costs by trapping dirt and moisture at the door.</p>
           </div>
           <div className={styles.additionalCard}>
             <h3>Repair Services</h3>
             <p>Professional repair and maintenance of existing flooring</p>
+          </div>
+          <div className={styles.additionalCard}>
+            <h3>Consultancy</h3>
+            <p>Expert advice on flooring solutions, material selection, and installation methods. Our consultancy service helps you make informed decisions about subfloor preparation, moisture testing, and the most suitable flooring options for your space.</p>
           </div>
         </div>
       </section>

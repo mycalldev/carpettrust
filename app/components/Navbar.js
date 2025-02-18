@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
+  const pathname = usePathname()
 
   const [toggle, setToggle] = useState(false)
 
@@ -65,12 +67,11 @@ export default function Navbar() {
                     <li className={styles.listItem}>Services</li>
                   </div>
                 </Link>
-                {/* <Link href={'/current'} className={styles.linkBTN} prefetch={true}>
+                <Link href={'/Projects'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
-                    <li className={styles.listItem}>Projects and Reviews</li>
+                    <li className={styles.listItem}>Projects & Reviews</li>
                   </div>
-                </Link> */}
-               
+                </Link>
                 <Link href={'/Contact'} className={styles.linkBTN} prefetch={true}>
                   <div className={styles.listItemContainer} onClick={() => handleToggle()}>
                     <li className={styles.listItem}>Contact</li>

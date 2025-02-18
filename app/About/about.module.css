@@ -5,50 +5,50 @@
 }
 
 .hero {
-  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .title {
-  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
   color: #333;
+  margin-bottom: 2rem;
 }
 
 .content {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .imageWrapper {
-  flex: 1;
-  min-width: 300px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .aboutImage {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
 }
 
 .textContent {
-  flex: 1;
-  min-width: 300px;
+  padding: 1rem;
 }
 
 .textContent h2 {
-  font-size: 1.8rem;
+  color: #333;
   margin-bottom: 1rem;
-  color: #444;
+  font-size: 2rem;
 }
 
 .textContent p {
+  color: #666;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #666;
 }
 
 .features {
@@ -57,23 +57,219 @@
 }
 
 .features li {
-  padding: 0.5rem 0;
-  position: relative;
+  margin-bottom: 0.8rem;
   padding-left: 1.5rem;
+  position: relative;
+  color: #555;
 }
 
-.features li:before {
+.features li::before {
   content: "✓";
   position: absolute;
   left: 0;
   color: #4a90e2;
 }
 
+/* Values Section */
+.values {
+  padding: 4rem 0;
+  background: #f8f9fa;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+}
+
+.values h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.valueCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.valueCard h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.valueCard p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Expertise Section */
+.expertise {
+  margin-bottom: 4rem;
+}
+
+.expertise h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.expertiseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.expertiseCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.expertiseImage {
+  position: relative;
+  height: 250px;
+}
+
+.expertiseCard .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expertiseCard h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  color: #333;
+}
+
+.expertiseCard p {
+  padding: 0 1.5rem 1.5rem;
+  color: #666;
+}
+
+/* Why Choose Us Section */
+.whyChooseUs {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+}
+
+.whyChooseUs h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.whyChooseContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.whyChooseText ul {
+  list-style: none;
+  padding: 0;
+}
+
+.whyChooseText li {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.whyChooseImage {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #4a90e2;
+  border-radius: 15px;
+  color: white;
+}
+
+.cta h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.primaryButton {
+  background: white;
+  color: #4a90e2;
+}
+
+.primaryButton:hover {
+  background: #f8f9fa;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .content {
+  .content,
+  .whyChooseContent {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
     flex-direction: column;
   }
-  
+
   .title {
     font-size: 2rem;
   }

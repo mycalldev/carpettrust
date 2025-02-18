@@ -1,0 +1,276 @@
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.projectsSection,
+.reviewsSection {
+  margin-bottom: 4rem;
+}
+
+.projectsSection h2,
+.reviewsSection h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #f8f9fa;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterButton.active {
+  background: #4a90e2;
+  color: white;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectSwiper {
+  width: 100%;
+  height: 300px;
+}
+
+.projectImage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.projectInfo {
+  padding: 1.5rem;
+}
+
+.projectInfo h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.location {
+  color: #4a90e2;
+  font-size: 0.9rem;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.reviewCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reviewHeader h3 {
+  color: #333;
+}
+
+.stars {
+  color: #ffd700;
+  letter-spacing: 2px;
+}
+
+.reviewText {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.reviewFooter {
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.cta h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.primaryButton {
+  background: #4a90e2;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #357abd;
+}
+
+.secondaryButton {
+  background: white;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+}
+
+.secondaryButton:hover {
+  background: #f8f9fa;
+}
+
+/* Optional: Style the Swiper navigation and pagination */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+:global(.swiper-pagination-bullet) {
+  background: #ffffff;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #4a90e2;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .reviewCard {
+    padding: 1.5rem;
+  }
+}
+
+.reviewSection {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.reviewHeader h4 {
+  color: #333;
+  margin: 0;
+}
+
+.stars {
+  color: #ffd700;
+  letter-spacing: 2px;
+}
+
+.reviewText {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.reviewDate {
+  color: #999;
+  font-size: 0.9rem;
+} 
