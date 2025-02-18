@@ -18,12 +18,12 @@ export default function Projects() {
       category: "flat",
       images: [
         "/Jobs/Bromley_Flat/image1.JPG",
-        "/Jobs/Bromley_Flat/image2.jpg",
-        "/Jobs/Bromley_Flat/image3.jpg",
-        "/Jobs/Bromley_Flat/image4.jpg",
-        "/Jobs/Bromley_Flat/image5.jpg",
-        "/Jobs/Bromley_Flat/image6.jpg",
-        "/Jobs/Bromley_Flat/image7.jpg"
+        "/Jobs/Bromley_Flat/image2.JPG",
+        "/Jobs/Bromley_Flat/image3.JPG",
+        "/Jobs/Bromley_Flat/image4.JPG",
+        "/Jobs/Bromley_Flat/image5.JPG",
+        "/Jobs/Bromley_Flat/image6.JPG",
+        "/Jobs/Bromley_Flat/image7.JPG"
       ],
       description: "Complete flat renovation with modern carpet installation throughout",
       location: "Bromley",
